@@ -1,0 +1,163 @@
+:root {
+  --main-bg-color: pink;
+  --herbe: #defde0;
+  --feu: #fddfdf;
+  --eau: #def3fd;
+  --insecte: #f8d5a3;
+  --start-gradient: #d5d4d9;
+  --end-gradient: #eeedbe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+img.pokedex {
+  height: 720px;
+  object-fit: cover;
+  z-index: -1;
+}
+h1 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 200px;
+  background: var(--herbe, green);
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: -1px 10px 5px 0px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: -1px 10px 5px 0px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: -1px 10px 5px 0px rgba(0, 0, 0, 0.49);
+}
+
+.img-container {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+.information {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.numero {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.nom {
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+input[type="submit"] {
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  background: var(--insecte);
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
+}
+
+input[type="submit"]:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card.fire {
+  background: var(--feu);
+}
+.card.water {
+  background: var(--eau);
+}
+.card.bug {
+  background: var(--insecte);
+}
+.card.grass {
+  background: var(--herbe);
+}
+
+.nametype {
+  position: absolute;
+  bottom: 151px;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  background: #84bf44;
+  filter: blur(0.5px);
+  left: 238px;
+  border-radius: 20px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.description {
+  position: absolute;
+  bottom: 32px;
+  width: 210px;
+  left: 147px;
+  background: #84bf44;
+  padding: 8px;
+  height: 100px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.sprites {
+  position: absolute;
+  top: 150px;
+  left: 130px;
+  width: 200px;
+}
+
+.next,
+.previous {
+  position: absolute;
+  bottom: 40px;
+  padding: 10px 20px;
+  width: 210px;
+  left: 30px;
+  cursor: pointer;
+  color: transparent;
+}
+
+.next {
+  bottom: 100px;
+  left: 50px;
+}
